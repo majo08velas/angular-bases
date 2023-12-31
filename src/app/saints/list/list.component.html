@@ -1,0 +1,16 @@
+<h1>Listado de Santos</h1>
+
+<h3 *ngIf="removedSaint; else noMoreSaints">Santo borrado <small class="text-danger">{{removedSaint}}</small></h3>
+<ng-template #noMoreSaints>
+  <h3 >No ha borrado nada</h3>
+</ng-template>
+
+
+
+<button class="btn btn-outline-danger" (click)="removeLastSaint()">
+  Borrar Santo
+</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let saint of saintNames" class="list-group-item">{{saint}}</li>
+</ul>

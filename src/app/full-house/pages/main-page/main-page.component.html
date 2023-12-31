@@ -1,0 +1,11 @@
+<p>full house main-page works!</p>
+
+
+<div class="row">
+  <div class="col">
+    <fh-character-list [characterListFromChild]="characters" (emitValueToDeleteToParent)="onDeleteCharacter($event)"></fh-character-list>
+  </div>
+  <div class="col">
+    <fh-add-character (onNewCharacter)="onNewCharacter($event)"></fh-add-character>
+  </div>
+</div>

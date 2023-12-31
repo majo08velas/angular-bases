@@ -1,0 +1,26 @@
+<h1>Santa {{name}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Método:</td>
+  <dd>{{getSaintDescription()}}</dd>
+
+  <td>País:</td>
+  <dd>{{capitalizeName}}</dd>
+</dl>
+
+<button *ngIf="name == 'Gema Galgani'" type="button" class="btn btn-outline-primary mx-2" (click)="changeSaint()">
+  Cambiar nombre
+</button>
+<button *ngIf="age == 25" type="button" class="btn btn-outline-primary" (click)="changeAge()">
+  Cambiar edad
+</button>
+<button type="button" class="btn btn-outline-primary mx-2" (click)="reset()">
+  Restablecer
+</button>
+
